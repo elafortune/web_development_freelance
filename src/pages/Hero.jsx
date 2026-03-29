@@ -71,10 +71,15 @@ function Hero() {
       />
 
       <div className="max-w-5xl mx-auto px-6 relative z-10 py-20 w-full">
-        {/* Availability badge */}
-        <div className="inline-flex items-center gap-2.5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5 mb-10 animate-fadeIn">
-          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-          <span className="text-green-400 text-sm font-semibold tracking-wide">{t('hero_intro')}</span>
+        {/* Badges */}
+        <div className="flex flex-wrap items-center gap-3 mb-10 animate-fadeIn">
+          <div className="inline-flex items-center gap-2.5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            <span className="text-green-400 text-sm font-semibold tracking-wide">{t('hero_intro')}</span>
+          </div>
+          <div className="inline-flex items-center gap-2 bg-indigo-500/10 backdrop-blur-sm border border-indigo-400/20 rounded-full px-5 py-2.5">
+            <span className="text-indigo-300 text-sm font-semibold tracking-wide">✦ 100% sur mesure</span>
+          </div>
         </div>
 
         {/* Main headline */}

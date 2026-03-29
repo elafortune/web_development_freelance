@@ -25,7 +25,7 @@ export const translations = {
     stat_clients: '< 24h',
     stat_clients_label: 'réponse garantie',
     stat_response: 'Offert',
-    stat_response_label: 'premier échange & devis',
+    stat_response_label: 'premier échange & devis sur mesure',
 
     // Personas
     personas_title: 'Vous vous reconnaissez ?',
@@ -132,7 +132,7 @@ export const translations = {
     stat_clients: '< 24h',
     stat_clients_label: 'guaranteed response',
     stat_response: 'Free',
-    stat_response_label: 'first call & quote',
+    stat_response_label: 'first call & custom quote',
 
     // Personas
     personas_title: 'Do you recognise yourself?',
