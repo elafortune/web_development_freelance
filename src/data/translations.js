@@ -20,12 +20,12 @@ export const translations = {
     hero_cta_whatsapp: 'Discuter sur WhatsApp',
 
     // Stats
-    stat_sites: '4',
-    stat_sites_label: 'sites réalisés',
-    stat_clients: '3',
-    stat_clients_label: 'clients satisfaits',
-    stat_response: '24h',
-    stat_response_label: 'réponse garantie',
+    stat_sites: '100%',
+    stat_sites_label: 'satisfaction clients',
+    stat_clients: '< 24h',
+    stat_clients_label: 'réponse garantie',
+    stat_response: 'Offert',
+    stat_response_label: 'premier échange & devis',
 
     // Personas
     personas_title: 'Vous vous reconnaissez ?',
@@ -99,7 +99,7 @@ export const translations = {
     contact_response: '⚡ Réponse sous 24h garantie',
 
     // Footer
-    footer_tagline: 'Des sites web qui font vendre.',
+    footer_tagline: 'Des sites web qui vous rendent visibles.',
     footer_nav: 'Navigation',
     footer_contact: 'Contact',
     footer_rights: 'Tous droits réservés.',
@@ -127,12 +127,12 @@ export const translations = {
     hero_cta_whatsapp: 'Chat on WhatsApp',
 
     // Stats
-    stat_sites: '4',
-    stat_sites_label: 'websites built',
-    stat_clients: '3',
-    stat_clients_label: 'happy clients',
-    stat_response: '24h',
-    stat_response_label: 'guaranteed response',
+    stat_sites: '100%',
+    stat_sites_label: 'client satisfaction',
+    stat_clients: '< 24h',
+    stat_clients_label: 'guaranteed response',
+    stat_response: 'Free',
+    stat_response_label: 'first call & quote',
 
     // Personas
     personas_title: 'Do you recognise yourself?',

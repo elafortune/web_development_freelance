@@ -149,9 +149,9 @@ function Contact() {
 
             {/* Devis info */}
             <div className="bg-primary-50 border border-primary-200 rounded-2xl p-6 mt-2">
-              <h4 className="font-bold text-slate-900 mb-2">Devis gratuit et detaille</h4>
+              <h4 className="font-bold text-slate-900 mb-2">💡 Devis gratuit et détaillé</h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Chaque projet est unique. Je vous propose un devis sur mesure, detaille et transparent, adapte exactement a vos besoins et votre budget.
+                Chaque projet est unique. Je vous propose un devis gratuit et détaillé, adapté exactement à vos besoins et votre budget.
               </p>
             </div>
           </div>

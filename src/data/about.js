@@ -1,7 +1,7 @@
 export const aboutInfo = {
   name: 'Emerick Lafortune',
   title: 'Développeur web freelance',
-  tagline: 'Des sites web qui font vendre.',
+  tagline: 'Des sites web qui vous rendent visibles.',
   profileImage: '/images/profile.jpg',
   bio: 'Basé à Paris, je crée des sites web complets — du design à la mise en ligne.',
   location: 'Paris, France',
