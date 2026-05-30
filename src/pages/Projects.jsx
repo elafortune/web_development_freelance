@@ -31,13 +31,17 @@ function BrowserMockup({ project, large = false }) {
           {project.url.replace('https://', '')}
         </div>
       </div>
-      {/* Preview */}
-      <div
-        className={`${large ? 'h-64 md:h-80' : 'h-52'} flex items-center justify-center relative`}
+      {/* Preview — cliquable vers le site */}
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`group ${large ? 'h-64 md:h-80' : 'h-52'} flex items-center justify-center relative cursor-pointer`}
         style={{ background: gradient }}
+        title={`Visiter ${project.title}`}
       >
         <div className="text-center px-8">
-          <div className="text-6xl mb-4 animate-float">{project.sectorIcon}</div>
+          <div className="text-6xl mb-4 animate-float transition-transform duration-300 group-hover:scale-125">{project.sectorIcon}</div>
           <p className="font-display font-bold text-xl" style={{ color: titleColor, textShadow: isDark ? '0 2px 8px rgba(0,0,0,0.5)' : '0 2px 8px rgba(255,255,255,0.5)' }}>
             {project.title}
           </p>
@@ -45,7 +49,16 @@ function BrowserMockup({ project, large = false }) {
             {project.type}
           </p>
         </div>
-      </div>
+        {/* Overlay hint au hover */}
+        <div className="absolute inset-0 flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span
+            className="text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm"
+            style={{ backgroundColor: isDark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.12)', color: titleColor }}
+          >
+            Visiter le site ↗
+          </span>
+        </div>
+      </a>
     </div>
   );
 }
