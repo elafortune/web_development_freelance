@@ -79,7 +79,7 @@ export const translations = {
     about_sub: 'Un développeur web freelance passionné par les belles interfaces et les résultats concrets.',
     about_bio: "Basé à Paris, je crée des sites web complets — du design à la mise en ligne. Mon objectif : que votre business soit représenté avec élégance et que votre site travaille pour vous 24h/24. Disponible en remote partout en France et à l'étranger.",
     about_location: 'Paris · Remote',
-    about_availability: 'Disponible pour de nouveaux projets',
+    about_availability: 'Disponible pour vos projets',
     about_skills_title: 'Technologies maîtrisées',
 
     // Contact
@@ -186,7 +186,7 @@ export const translations = {
     about_sub: 'A freelance web developer passionate about beautiful interfaces and tangible results.',
     about_bio: 'Based in Paris, I build complete websites — from design to launch. My goal: your business looks elegant and your website works for you 24/7. Available remotely across France and internationally.',
     about_location: 'Paris · Remote',
-    about_availability: 'Available for new projects',
+    about_availability: 'Available for your projects',
     about_skills_title: 'Technologies I use',
 
     // Contact

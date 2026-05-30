@@ -157,7 +157,7 @@ function Hero() {
               {/* Badge disponible */}
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap inline-flex items-center gap-2 bg-slate-900/90 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 shadow-xl">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span className="text-green-400 text-xs font-semibold">{t('about_availability') || 'Disponible pour nouveaux projets'}</span>
+                <span className="text-green-400 text-xs font-semibold">{t('about_availability') || 'Disponible pour vos projets'}</span>
               </div>
             </div>
           </div>
