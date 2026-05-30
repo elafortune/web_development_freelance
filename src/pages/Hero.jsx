@@ -135,8 +135,8 @@ function Hero() {
             </div>
           </div>
 
-          {/* Right column — photo */}
-          <div className="flex-shrink-0 flex justify-center animate-fadeIn delay-200">
+          {/* Right column — photo (first on mobile, right on desktop) */}
+          <div className="flex-shrink-0 flex justify-center animate-fadeIn delay-200 order-first lg:order-last">
             <div className="relative">
               {/* Glow ambiant */}
               <div
