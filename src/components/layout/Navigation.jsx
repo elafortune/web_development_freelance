@@ -54,7 +54,7 @@ function Navigation() {
             onClick={(e) => handleNavClick(e, 'home')}
             className={`text-2xl font-display font-bold transition-colors tracking-tight ${dark ? 'text-white hover:text-indigo-300' : 'text-primary-600 hover:text-primary-700'}`}
           >
-            EL<span className={dark ? 'text-indigo-400' : 'text-primary-300'}>.</span>
+            lafortconseil<span className={dark ? 'text-indigo-400' : 'text-primary-300'}>.</span>
           </a>
 
           {/* Desktop nav */}
