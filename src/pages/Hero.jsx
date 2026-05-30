@@ -71,63 +71,97 @@ function Hero() {
       />
 
       <div className="max-w-5xl mx-auto px-6 relative z-10 py-20 w-full">
-        {/* Badges */}
-        <div className="flex flex-wrap items-center gap-3 mb-10 animate-fadeIn">
-          <div className="inline-flex items-center gap-2.5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-green-400 text-sm font-semibold tracking-wide">{t('hero_intro')}</span>
-          </div>
-          <div className="inline-flex items-center gap-2 bg-indigo-500/10 backdrop-blur-sm border border-indigo-400/20 rounded-full px-5 py-2.5">
-            <span className="text-indigo-300 text-sm font-semibold tracking-wide">✦ 100% sur mesure</span>
-          </div>
-        </div>
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-        {/* Main headline */}
-        <div className="mb-7 animate-fadeIn delay-100">
-          <h1 className="font-display font-bold leading-none tracking-tight">
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-2">
-              {t('hero_headline_1') || 'Je crée des sites'}
-            </span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
-              {t('hero_headline_2') || 'qui vous rendent visibles.'}
-            </span>
-          </h1>
-        </div>
-
-        {/* Sub */}
-        <p className="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed mb-10 animate-fadeIn delay-200">
-          {t('hero_sub')}
-        </p>
-
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fadeIn delay-300">
-          <button
-            onClick={() => scrollTo('projects')}
-            className="btn-primary text-base px-8 py-4"
-          >
-            {t('hero_cta_primary')} ↓
-          </button>
-          <button
-            onClick={handleWhatsApp}
-            className="btn-whatsapp text-base px-8 py-4 flex items-center gap-2"
-          >
-            {WHATSAPP_SVG}
-            {t('hero_cta_whatsapp')}
-          </button>
-        </div>
-
-        {/* Stats */}
-        <div className="flex flex-wrap gap-10 pt-8 border-t border-white/10 animate-fadeIn delay-400">
-          {[
-            { value: t('stat_sites'), label: t('stat_sites_label') },
-            { value: t('stat_clients'), label: t('stat_clients_label') },
-            { value: t('stat_response'), label: t('stat_response_label') },
-          ].map((stat, i) => (
-            <div key={i}>
-              <div className="text-4xl font-display font-bold text-white">{stat.value}</div>
-              <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
+          {/* Left column — text content */}
+          <div className="flex-1 min-w-0">
+            {/* Badges */}
+            <div className="flex flex-wrap items-center gap-3 mb-10 animate-fadeIn">
+              <div className="inline-flex items-center gap-2.5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                <span className="text-green-400 text-sm font-semibold tracking-wide">{t('hero_intro')}</span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-indigo-500/10 backdrop-blur-sm border border-indigo-400/20 rounded-full px-5 py-2.5">
+                <span className="text-indigo-300 text-sm font-semibold tracking-wide">✦ 100% sur mesure</span>
+              </div>
             </div>
-          ))}
+
+            {/* Main headline */}
+            <div className="mb-7 animate-fadeIn delay-100">
+              <h1 className="font-display font-bold leading-none tracking-tight">
+                <span className="block text-5xl sm:text-6xl md:text-7xl text-white mb-2">
+                  {t('hero_headline_1') || 'Je crée des sites'}
+                </span>
+                <span className="block text-5xl sm:text-6xl md:text-7xl bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
+                  {t('hero_headline_2') || 'qui vous rendent visibles.'}
+                </span>
+              </h1>
+            </div>
+
+            {/* Sub */}
+            <p className="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed mb-10 animate-fadeIn delay-200">
+              {t('hero_sub')}
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fadeIn delay-300">
+              <button
+                onClick={() => scrollTo('projects')}
+                className="btn-primary text-base px-8 py-4"
+              >
+                {t('hero_cta_primary')} ↓
+              </button>
+              <button
+                onClick={handleWhatsApp}
+                className="btn-whatsapp text-base px-8 py-4 flex items-center gap-2"
+              >
+                {WHATSAPP_SVG}
+                {t('hero_cta_whatsapp')}
+              </button>
+            </div>
+
+            {/* Stats */}
+            <div className="flex flex-wrap gap-10 pt-8 border-t border-white/10 animate-fadeIn delay-400">
+              {[
+                { value: t('stat_sites'), label: t('stat_sites_label') },
+                { value: t('stat_clients'), label: t('stat_clients_label') },
+                { value: t('stat_response'), label: t('stat_response_label') },
+              ].map((stat, i) => (
+                <div key={i}>
+                  <div className="text-4xl font-display font-bold text-white">{stat.value}</div>
+                  <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right column — photo */}
+          <div className="flex-shrink-0 flex justify-center animate-fadeIn delay-200">
+            <div className="relative">
+              {/* Glow ambiant */}
+              <div
+                className="absolute inset-0 rounded-3xl scale-110 opacity-50 blur-2xl"
+                style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7, #7c3aed)' }}
+              />
+              {/* Gradient border */}
+              <div
+                className="relative p-[3px] rounded-3xl"
+                style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7, #7c3aed)' }}
+              >
+                <img
+                  src="/images/IMG_1921.JPG"
+                  alt="Emerick Lafortune — développeur web freelance"
+                  className="w-56 h-72 sm:w-64 sm:h-80 lg:w-72 lg:h-96 object-cover object-top rounded-[calc(1.5rem-3px)]"
+                />
+              </div>
+              {/* Badge disponible */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap inline-flex items-center gap-2 bg-slate-900/90 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 shadow-xl">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                <span className="text-green-400 text-xs font-semibold">{t('about_availability') || 'Disponible pour nouveaux projets'}</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 

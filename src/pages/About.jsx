@@ -24,8 +24,12 @@ function About() {
           {/* Left: bio (3 cols) */}
           <div className="lg:col-span-3">
             <div className="flex items-center gap-5 mb-8">
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-500 to-violet-500 flex items-center justify-center text-3xl font-display font-bold text-white shadow-lg shadow-primary-500/30 flex-shrink-0">
-                E
+              <div className="w-20 h-20 rounded-2xl overflow-hidden shadow-lg shadow-primary-500/30 flex-shrink-0 ring-2 ring-primary-400/30">
+                <img
+                  src="/images/IMG_1921.JPG"
+                  alt="Emerick Lafortune"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div>
                 <h3 className="font-display text-xl font-bold text-slate-900">Emerick Lafortune</h3>
