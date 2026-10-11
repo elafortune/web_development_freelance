@@ -8,39 +8,37 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-        display: ['Syne', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        display: ['Bricolage Grotesque', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        hand: ['Caveat', 'cursive'],
       },
       colors: {
-        primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b',
+        // Palette "papier & stickers"
+        paper: {
+          DEFAULT: '#FFF7EC',
+          dark: '#F6E9D6',
         },
-        surface: {
-          DEFAULT: '#ffffff',
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
+        ink: {
+          DEFAULT: '#17140F',
+          soft: '#4A443B',
+          muted: '#7A7266',
         },
-        dark: {
-          DEFAULT: '#0f172a',
-          light: '#1e293b',
-          lighter: '#334155',
-        }
+        tomato: { DEFAULT: '#FF5B3A', dark: '#E2401F', light: '#FFD9CF' },
+        lemon: { DEFAULT: '#FFD43B', light: '#FFF1B8' },
+        mint: { DEFAULT: '#3DDC97', light: '#CDF5E2' },
+        lilac: { DEFAULT: '#B79CFF', light: '#ECE4FF' },
+        sky: { DEFAULT: '#7CC6FF', light: '#DDF0FF' },
+        whatsapp: '#25D366',
+      },
+      boxShadow: {
+        brutal: '4px 4px 0 0 #17140F',
+        'brutal-sm': '2px 2px 0 0 #17140F',
+        'brutal-lg': '8px 8px 0 0 #17140F',
       },
       animation: {
-        marquee: 'marquee 35s linear infinite',
+        marquee: 'marquee 30s linear infinite',
         float: 'float 6s ease-in-out infinite',
-        blob: 'blob 8s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        wiggle: 'wiggle 2.5s ease-in-out infinite',
+        'spin-slow': 'spin 14s linear infinite',
       },
       keyframes: {
         marquee: {
@@ -49,11 +47,11 @@ export default {
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-16px)' },
+          '50%': { transform: 'translateY(-12px)' },
         },
-        blob: {
-          '0%, 100%': { borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },
-          '50%': { borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%' },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
         },
       },
     },

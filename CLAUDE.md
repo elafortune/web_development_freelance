@@ -15,12 +15,13 @@ npm run lint         # Run ESLint
 
 ## Project Overview
 
-This is a **professional Data Scientist portfolio** built with a modular architecture. The site features:
-- Single-page application with smooth scroll navigation
-- 5 main sections: Hero, Projects, Skills, About, Contact
-- Project filtering and modal details
-- Responsive design (mobile-first)
-- Sober color scheme (blue, black, white)
+**Freelance web-developer portfolio / landing page** (lafortconseil) that sells websites to small local businesses. Goal: convert visitors into "free mockup" requests (WhatsApp/email).
+
+- Single page, sections in order: Hero, Marquee (trades), Projects, Process, Offer (pricing), Testimonials, About, Faq, Contact (mockup form)
+- FR/EN via `LanguageContext` + `src/data/translations.js` (`t(key, vars)` fills `{placeholders}`, `{delay}` comes from `src/data/offer.js`)
+- Prices/commitments live in `src/data/offer.js`; client projects + screenshots in `src/data/projects.js` / `public/images/projects/*.webp`
+- Mobile sticky CTA (`StickyCta`), no backend: the form opens WhatsApp with a prefilled message
+- Playful "paper & stickers" design: thick ink borders, hard shadows, handwritten accents, little text
 
 ## Project Architecture
 
@@ -178,11 +179,13 @@ This is a **professional Data Scientist portfolio** built with a modular archite
 
 ## Styling Guidelines
 
-### Color Usage
-- **Background**: `bg-dark`, `bg-dark-light`, `bg-dark-lighter`
-- **Text**: `text-white` (primary), `text-gray-300/400` (secondary), `text-primary-400` (accent)
-- **Borders**: `border-primary-500/30` (subtle), `border-primary-600` (prominent)
-- **Buttons**: Use `.btn-primary` or `.btn-secondary` classes
+### Design system (tailwind.config.js + src/index.css)
+- **Colors**: `paper` (background), `ink` (text/borders), accents `tomato`, `lemon`, `mint`, `lilac`, `sky` (each has a `-light` variant)
+- **Fonts**: `font-display` (Bricolage Grotesque, headings), `font-sans` (Plus Jakarta Sans), `font-hand` (Caveat, handwritten notes)
+- **Components**: `.btn-primary` (lemon), `.btn-tomato`, `.btn-white`, `.btn-whatsapp`, `.card`, `.sticker`, `.eyebrow`, `.section-title`
+- **Shadows**: `shadow-brutal`, `shadow-brutal-sm`, `shadow-brutal-lg` (hard offset shadows)
+- Reusable visuals: `components/common/Frames.jsx` (BrowserFrame, PhoneFrame, Polaroid), `Doodles.jsx` (Underline, HandArrow, SpinBadge, Stars, WhatsAppIcon), `Reveal.jsx` (scroll fade-in)
+- Don't build Tailwind class names dynamically (`bg-${color}`): use a lookup object with full class names
 
 ### Responsive Patterns
 ```jsx
